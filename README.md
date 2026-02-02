@@ -142,3 +142,4 @@ tail -f /root/openclaw/memory-wiki/trades.jsonl
 # Restart agents
 docker compose -f /root/openclaw/docker-compose.yml restart
 ```
+<!-- updated: 2026-02-02-02 -->
