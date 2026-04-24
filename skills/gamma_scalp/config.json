@@ -1,0 +1,16 @@
+{
+  "skill": "gamma_scalp",
+  "version": "0.1.0-stub",
+  "enabled": false,
+  "_note": "Set enabled=true and drop soul.md + risk.md into this folder to activate Phase 2",
+  "delta_threshold": 0.05,
+  "gamma_target": 0.0,
+  "hedge_interval_seconds": 60,
+  "underlying": null,
+  "expiration_ladder": ["front", "second"],
+  "strikes": "atm_plus_minus_2",
+  "subscriptions": {
+    "maxConcurrent": 40,
+    "tickTypes": ["OPTION_DELTA", "OPTION_GAMMA", "OPTION_THETA", "OPTION_VEGA"]
+  }
+}

@@ -1,0 +1,4 @@
+memory-wiki/
+*.log
+.env
+node_modules/

@@ -1,0 +1,48 @@
+services:
+  executor:
+    build: .
+    image: openclaw:2026.4.7
+    container_name: openclaw-executor
+    restart: always
+    environment:
+      - OPENCLAW_ROLE=executor
+      - TT_USERNAME=Nadir369
+      - TT_PASSWORD=KyleKodi@2000
+      - TT_SANDBOX=true
+    volumes:
+      - ./memory-wiki:/workspace/memory
+      - ./skills:/workspace/skills
+      - ./executor:/workspace/config
+    networks:
+      - openclaw-net
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  critic:
+    build: .
+    image: openclaw:2026.4.7
+    container_name: openclaw-critic
+    restart: always
+    environment:
+      - OPENCLAW_ROLE=critic
+      - TT_USERNAME=Nadir369
+      - TT_PASSWORD=KyleKodi@2000
+      - TT_SANDBOX=true
+    volumes:
+      - ./memory-wiki:/workspace/memory
+      - ./skills:/workspace/skills
+      - ./critic:/workspace/config
+    networks:
+      - openclaw-net
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+networks:
+  openclaw-net:
+    driver: bridge
