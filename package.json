@@ -1,0 +1,9 @@
+{
+  "name": "openclaw-agent",
+  "version": "2026.4.7",
+  "description": "OpenClaw MCP Agent for Tastytrade Sandbox",
+  "main": "agent.js",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

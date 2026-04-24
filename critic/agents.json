@@ -1,0 +1,28 @@
+{
+  "version": "2026.4.7",
+  "role": "critic",
+  "ibkr": {
+    "host": "host.docker.internal",
+    "port": 4002,
+    "clientId": 2,
+    "mode": "paper",
+    "subscriptions": {
+      "maxConcurrent": 5,
+      "retryDelayMs": 500,
+      "tickTypes": ["OPTION_DELTA", "OPTION_GAMMA"]
+    }
+  },
+  "permissions": {
+    "canTrade": false,
+    "canWithdraw": false,
+    "validateBeforeExecute": true
+  },
+  "risk_limits": {
+    "maxDeltaExposure": 0.10,
+    "maxGammaExposure": 0.05,
+    "maxDailyLoss": 500,
+    "haltOnBreach": true
+  },
+  "skills_path": "/workspace/skills",
+  "memory_path": "/workspace/memory/trades.jsonl"
+}
